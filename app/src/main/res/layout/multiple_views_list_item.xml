@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_image_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/poi_list_item_image"
+            android:src="@drawable/ic_launcher"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="8dp"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/rl_content_container"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@+id/rl_image_container"
+        android:orientation="horizontal"
+        android:clickable="false"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:paddingTop="5dp"
+            android:clickable="true"
+            android:background="@drawable/selector_background_color_list_item"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/poi_list_item_name"
+                android:text="Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:singleLine="true"/>
+            <TextView
+                android:id="@+id/poi_list_item_detail"
+                android:text="Detail text here"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:ellipsize="end"/>
+            <TextView
+                android:id="@+id/poi_list_item_detail_line2"
+                android:text="Detail line 2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:ellipsize="end"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_poi_list_item_navi_action"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:clickable="true"
+            android:background="@drawable/selector_background_color_list_item"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/poi_list_item_walking_icon"
+                android:layout_width="12dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_launcher" />
+            <TextView
+                android:id="@+id/poi_list_item_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:textSize="10sp"
+                android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_content_container"
+        android:layout_toRightOf="@+id/rl_image_container"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/border_top">
+        <TextView
+            android:id="@+id/poi_list_item_more_options"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:background="@drawable/selector_background_color_list_item"
+            android:gravity="center_vertical"
+            android:text="More" />
+    </LinearLayout>
+
+</RelativeLayout>

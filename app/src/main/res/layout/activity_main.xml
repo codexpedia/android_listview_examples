@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.dynamiclistview.MainActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simple Dynamic List"
+        android:onClick="simpleDynamicList"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nested Dynamic List"
+        android:onClick="nestedDynamicList"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="List View with different layout"
+        android:onClick="differentLayoutList"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="List View with multi views in each item"
+        android:onClick="multiViewsItemList"/>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/ib_more_info"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        android:stateListAnimator="@drawable/info_icon_state_selector"
+        android:elevation="2dp"
+        android:background="@drawable/info_icon_selector">
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="i"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#fff"/>
+    </RelativeLayout>
+
+</LinearLayout>
